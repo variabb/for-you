@@ -8,9 +8,9 @@ const steps = [
     title: "Етап 2: Перевірка настрою",
     content: `
     <p class="step-two-title">Як ти зараз себе почуваєш?</p>
-    <button onclick="showMood('good')">😊 Добре</button>
-    <button onclick="showMood('meh')">😐 Таке</button>
-    <button onclick="showMood('bad')">😢 Не дуже</button>
+    <button class="mood-btn" onclick="showMood('good')">😊 Добре</button>
+    <button class="mood-btn" onclick="showMood('meh')">😐 Таке</button>
+    <button class="mood-btn" onclick="showMood('bad')">😢 Не дуже</button>
     <div id="moodResult" style="margin-top: 20px;"></div>
   `,
   },
@@ -49,7 +49,6 @@ function nextStep() {
     document.getElementById("title").innerText = steps[stepIndex].title;
     document.getElementById("content").innerHTML = steps[stepIndex].content;
 
- 
     if (stepIndex === 0) {
       document.getElementById("nextBtn").innerText = "Далі";
     }
